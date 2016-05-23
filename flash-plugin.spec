@@ -2,7 +2,7 @@
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        11.2.202.616
+Version:        11.2.202.621
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
@@ -77,6 +77,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Mon May 23 2016 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.621-1
+- Update to 11.2.202.621.
+
 * Wed Apr 13 2016 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.616-1
 - Update to 11.2.202.616.
 
