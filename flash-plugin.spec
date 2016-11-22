@@ -1,8 +1,10 @@
+%global         _with_beta 1
+
 %global         debug_package %{nil}
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        11.2.202.644
+Version:        24.0.0.154
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
@@ -10,8 +12,15 @@ License:        Non-redistributable, no modification permitted
 URL:            http://get.adobe.com/flashplayer/
 ExclusiveArch:  %{ix86} x86_64
 
+%{!?_with_beta:
 Source0:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/install_flash_player_11_linux.i386.tar.gz
 Source1:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/install_flash_player_11_linux.x86_64.tar.gz
+}
+
+%{?_with_beta:
+Source0:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux64/flash_player_npapi_linux.x86_64.tar.gz
+Source1:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux32/flash_player_npapi_linux.i386.tar.gz
+}
 
 BuildRequires:  desktop-file-utils
 Requires:       mozilla-filesystem
@@ -68,6 +77,7 @@ fi
 gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %files
+%{?_with_beta:%license license.pdf}
 %doc readme.txt
 %{_libdir}/mozilla/plugins/libflashplayer.so
 
@@ -77,6 +87,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Tue Nov 22 2016 Simone Caronni <negativo17@gmail.com> - 1:24.0.0.154-1
+- Update to latest beta version 24.0.0.154.
+
 * Wed Nov 09 2016 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.644-1
 - Update to 11.2.202.644.
 
