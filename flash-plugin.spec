@@ -5,7 +5,7 @@
 
 Name:           flash-plugin
 Version:        24.0.0.154
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
@@ -18,8 +18,8 @@ Source1:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/
 }
 
 %{?_with_beta:
-Source0:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux64/flash_player_npapi_linux.x86_64.tar.gz
-Source1:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux32/flash_player_npapi_linux.i386.tar.gz
+Source0:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux32/flash_player_npapi_linux.i386.tar.gz
+Source1:        https://fpdownload.macromedia.com/pub/labs/flashruntimes/flashplayer/linux64/flash_player_npapi_linux.x86_64.tar.gz
 }
 
 BuildRequires:  desktop-file-utils
@@ -87,6 +87,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Fri Nov 25 2016 Simone Caronni <negativo17@gmail.com> - 1:24.0.0.154-2
+- Fix typo in sources.
+
 * Tue Nov 22 2016 Simone Caronni <negativo17@gmail.com> - 1:24.0.0.154-1
 - Update to latest beta version 24.0.0.154.
 
