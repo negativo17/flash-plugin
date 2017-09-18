@@ -37,16 +37,15 @@ Adobe Flash Player preferences control panel.
 %endif
 
 %ifarch x86_64
-%setup -q -c -T -b 1 -n %{name}
+%setup -q -T -a 1 -c -n %{name}
 %endif
 
 %build
 # Nothing to build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_datadir}
-cp -afr ./%{_datadir}/{icons,applications} %{buildroot}%{_datadir}/
+cp -afr .%{_datadir}/{icons,applications} %{buildroot}%{_datadir}/
 
 install -p -m 0755 -D .%{_bindir}/flash-player-properties \
     %{buildroot}%{_bindir}/flash-player-properties
