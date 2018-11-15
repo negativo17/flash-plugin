@@ -2,8 +2,8 @@
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        31.0.0.122
-Release:        1%{?dist}
+Version:        31.0.0.148
+Release:        1%{?dist}1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
@@ -77,6 +77,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Thu Nov 15 2018 Simone Caronni <negativo17@gmail.com> - 1:31.0.0.148-1
+- Update to 31.0.0.148.
+
 * Thu Oct 11 2018 Simone Caronni <negativo17@gmail.com> - 1:31.0.0.122-1
 - Update to 31.0.0.122.
 
