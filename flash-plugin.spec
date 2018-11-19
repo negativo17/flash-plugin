@@ -3,7 +3,7 @@
 
 Name:           flash-plugin
 Version:        31.0.0.148
-Release:        1%{?dist}1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
@@ -77,6 +77,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Mon Nov 19 2018 Simone Caronni <negativo17@gmail.com> - 1:31.0.0.148-2
+- Fix version/release (rpmdev-bumpspec bug).
+
 * Thu Nov 15 2018 Simone Caronni <negativo17@gmail.com> - 1:31.0.0.148-1
 - Update to 31.0.0.148.
 
