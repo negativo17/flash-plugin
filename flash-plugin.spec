@@ -2,7 +2,7 @@
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        32.0.0.403
+Version:        32.0.0.414
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
@@ -77,6 +77,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Sun Aug 16 2020 Simone Caronni <negativo17@gmail.com> - 1:32.0.0.414-1
+- Update to 32.0.0.414.
+
 * Wed Jul 22 2020 Simone Caronni <negativo17@gmail.com> - 1:32.0.0.403-1
 - Update to 32.0.0.403.
 
